@@ -7,6 +7,7 @@ import { terser } from 'rollup-plugin-terser';
 import styles from 'rollup-plugin-styles';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import image from '@rollup/plugin-image';
+import commonjs from '@rollup/plugin-commonjs';
 
 
 const isProduction = process.env.PRODUCTION === 'true';
@@ -25,6 +26,8 @@ export default [{
     },
     plugins: [
         nodeResolve(),
+        commonjs(),
+        nodeResolve(),
         typescript(),
         image(),
         styles(),
@@ -34,7 +37,9 @@ export default [{
             port: 8080,
         }),
         isServe && livereload(),
-    ]
+    ],
+    context: "window",
+    moduleContext: "window",
 }, {
     input: './src/css/style.css',
     output: {

@@ -12,6 +12,7 @@
         "eslint": "eslint src --ext .ts"
     },
     "devDependencies": {
+        "@rollup/plugin-commonjs": "*",
         "@rollup/plugin-image": "*",
         "@rollup/plugin-node-resolve": "*",
         "@rollup/plugin-typescript": "*",
