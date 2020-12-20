@@ -6,6 +6,7 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import styles from 'rollup-plugin-styles';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import image from '@rollup/plugin-image';
 
 
 const isProduction = process.env.PRODUCTION === 'true';
@@ -25,6 +26,8 @@ export default [{
     plugins: [
         nodeResolve(),
         typescript(),
+        image(),
+        styles(),
         isProduction && terser(),
         isServe && serve({
             contentBase: './public/',

@@ -12,11 +12,13 @@
         "eslint": "eslint src --ext .ts"
     },
     "devDependencies": {
+        "@rollup/plugin-image": "*",
         "@rollup/plugin-node-resolve": "*",
         "@rollup/plugin-typescript": "*",
         "@types/node": "*",
         "@typescript-eslint/eslint-plugin": "*",
         "@typescript-eslint/parser": "*",
+        "core-js": "*",
         "eslint": "*",
         "excalibur": "*",
         "rollup": "*",
