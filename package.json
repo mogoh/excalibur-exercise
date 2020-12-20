@@ -1,0 +1,33 @@
+{
+    "name": "unnamed",
+    "version": "0.0.0",
+    "type": "module",
+    "private": true,
+    "license": "UNLICENSED",
+    "scripts": {
+        "rollup": "rollup --config",
+        "rollup_serve": "rollup --config --watch --environment SERVE:true",
+        "rollup_prod": "rollup --config --environment PRODUCTION:true",
+        "clean": "rm -r public/js/*",
+        "eslint": "eslint src --ext .ts"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "*",
+        "@rollup/plugin-typescript": "*",
+        "@types/node": "*",
+        "@typescript-eslint/eslint-plugin": "*",
+        "@typescript-eslint/parser": "*",
+        "eslint": "*",
+        "excalibur": "*",
+        "rollup": "*",
+        "rollup-plugin-livereload": "*",
+        "rollup-plugin-serve": "*",
+        "rollup-plugin-styles": "*",
+        "rollup-plugin-terser": "*",
+        "ts-node": "*",
+        "tsconfig-paths": "*",
+        "tslib": "*",
+        "typescript": "*"
+    },
+    "dependencies": {}
+}
