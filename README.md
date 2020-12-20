@@ -1,10 +1,8 @@
 # README
 
-This is some basic web frontend skeleton.
+This is a try of making excalibur.js work with rollup.js.
+
+Also using:
 
 * yarn
-* html
-* css
-* typescript
 * eslint
-* rollup.js
