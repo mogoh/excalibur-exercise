@@ -1,4 +1,5 @@
-import { Engine } from "../../node_modules/excalibur/dist/index.js";
+// import { Engine } from "../../node_modules/excalibur/dist/index.js";
+import { Engine } from "excalibur";
 // game.ts
 
 // Create an instance of the engine.
