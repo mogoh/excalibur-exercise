@@ -1,4 +1,4 @@
-import { Actor } from "excalibur";
+import { Actor, pointermove } from "excalibur";
 import { CollisionType } from "excalibur";
 import { Color } from "excalibur";
 import { Engine } from "excalibur";
@@ -31,9 +31,14 @@ paddle.color = Color.Chartreuse;
 paddle.body.collider.type = CollisionType.Fixed;
 
 // Add a mouse move listener
-game.input.pointers.primary.on("move", (event: PointerMoveEvent) => {
-    paddle.pos.x = event.target.lastWorldPos.x;
+game.input.pointers.primary.on("move", (event: pointermove) => {
+    console.log(event);
+    // paddle.pos.x = event.target.lastWorldPos.x;
 });
+
+// `game.add` is the same as calling
+// `game.currentScene.add`
+game.add(paddle);
 
 // Start the engine to begin the game.
 void game.start();
