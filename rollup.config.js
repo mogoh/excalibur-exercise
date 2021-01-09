@@ -27,10 +27,9 @@ export default [{
     plugins: [
         nodeResolve(),
         commonjs(),
-        nodeResolve(),
-        typescript(),
         image(),
         styles(),
+        isProduction ? typescript({ inlineSourceMap: false }) : typescript(),
         isProduction && terser(),
         isServe && serve({
             contentBase: './public/',

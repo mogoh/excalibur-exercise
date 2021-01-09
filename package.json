@@ -5,9 +5,9 @@
     "private": true,
     "license": "UNLICENSED",
     "scripts": {
-        "rollup": "rollup --config",
-        "rollup_serve": "rollup --config --watch --environment SERVE:true",
-        "rollup_prod": "rollup --config --environment PRODUCTION:true",
+        "rollup": "rollup --config rollup.config.js",
+        "rollup_serve": "rollup --config rollup.config.js --watch --environment SERVE:true",
+        "rollup_prod": "rollup --config rollup.config.js --environment PRODUCTION:true",
         "clean": "rm -r public/js/*",
         "eslint": "eslint src --ext .ts"
     },
@@ -30,7 +30,7 @@
         "ts-node": "*",
         "tsconfig-paths": "*",
         "tslib": "*",
-        "typescript": "*"
+        "typescript": "4.2.0-dev.20210108"
     },
     "dependencies": {}
 }
